@@ -2,7 +2,9 @@
 const fs = require('fs');
 
 const inquirer = require('inquirer');
-// const generateMarkdown = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown');
+
+
 
 // TODO: Create an array of questions for user input
 const licenses = [
@@ -77,62 +79,29 @@ const questions = [
     {
         type: 'input',
         name: 'email',
-        message: 'Please enter your Emmail address.',
+        message: 'Please enter your Email address.',
     },
 ];
 
 inquirer.prompt(questions)
     .then((answers) => {
-        console.log(answers);
-    })
-
+        const userAnswers = answers;
+    const readmeContent = generateMarkdown(userAnswers);
 // // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//     `# <Your-Project-Title>
-
-//     ## Description
-    
-//     Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-    
-//     - What was your motivation?
-//     - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-//     - What problem does it solve?
-//     - What did you learn?
-    
-//     ## Table of Contents    
-     
-//     - [Installation](#installation)
-//     - [Usage](#usage)
-//     - [Credits](#credits)
-//     - [License](#license)
-    
-//     ## Installation
-    
-       
-//     ## Usage
-    
-       
-//     ## Credits
-    
-      
-//     ## License
-    
-         
-//     ## Badges
-    
-   
-//     ## Features
-
-
-//     ## How to Contribute
-    
-//     `
-// }
+fs.writeFile('README.md', readmeContent, (err) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    console.log('README.md file created successfully!');
+});
+})
+//     
 
 // // TODO: Create a function to initialize app
 // function init() { }
 
 // // Function call to initialize app
 // init();
-// module.import = generateMarkdown
+
 // console.log(generateMarkdown(data))
