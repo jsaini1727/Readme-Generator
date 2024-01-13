@@ -34,8 +34,7 @@ function renderLicenseSection(license) {
   }
   return '';
 }
-// const name = "JD"
-// const someString = `hi there, welcome ${name}`
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
@@ -51,7 +50,6 @@ function generateMarkdown(data) {
   - [Contribute](#contribute)
   - [Github](#github)
   - [Email](#email)
-
   ## Description
   ${data.description}
 
@@ -62,7 +60,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## Credits
-${data.credits}
+  ${data.credits}
 
   ${renderLicenseSection(data.license)}
   
@@ -73,11 +71,11 @@ ${data.credits}
   ## Contribute
   ${data.contribute}
 
-  ## Questions
-  For any question, please contact me
-  - Github: ${data.github}
+  
+  
+  ## Github: ${data.github}
 
-  - Email: ${data.email}
+  ## Email: ${data.email}
 `;
 }
 

@@ -4,7 +4,7 @@ const licenses = [
         badge: 'https://img.shields.io/badge/License-Apache2.0-blue.svg',
     },
     {
-        name: 'GNU',
+        name: 'GNU License',
         badge: 'https://img.shields.io/badge/License-GNU-green.svg',
     },
     {
@@ -33,7 +33,7 @@ const questions = [
         name: 'title',
         message: 'What is the name of your application / project?',
     },
-        {
+    {
         type: 'input',
         name: 'description',
         message: 'Why did you build this project and what did you learn?',
