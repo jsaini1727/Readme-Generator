@@ -6,6 +6,7 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
+  - ScreenCastify Video Link
  - [License](#license)
   - [Features](#features)
   - [Contribute](#contribute)
@@ -24,7 +25,8 @@
   ## Credits
 JD, MM, AS.
 
-  
+  ## ScreenCastify Video Link
+https://drive.google.com/file/d/1jLvBQKPC7gO38NkvR_JNdjXhLLTXPnBE/view?usp=sharing
 
   ## License
 
